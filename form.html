@@ -1,0 +1,531 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
+
+
+
+ <style>
+
+
+     
+    </style>
+
+
+  <script type = "text/javascript" 
+         src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+  </script>
+        
+ 
+
+
+</head>
+<body>
+<div class="bs-callout bs-callout-warning hidden">
+  <h4>Oh snap!</h4>
+  <p>This form seems to be invalid :(</p>
+</div>
+
+<div class="bs-callout bs-callout-info hidden">
+  <h4>Yay!</h4>
+  <p>Everything seems to be ok :)</p>
+</div>
+<div  class="container" >
+<div  class="container"style="width:500px;">
+    <h1> Find Your Place</h1>
+  <form id="demo-form">
+  <div class="form-group">
+    
+        <input id="searchInput" class="form-control" type="text" placeholder="Enter a location" required="">    
+
+  </div>
+
+
+  <div class="form-group">
+ 
+    <input type="text" class="form-control" id="xxx" required="" >
+   
+  </div>
+
+
+
+    <div class="form-group">
+    
+       <select class="form-control" id="abc"  placeholder="Category" required="">
+           
+    <option>accounting</option>
+    <option>airport</option>
+    <option>amusement_park</option>
+    <option>aquarium</option>
+    <option>art_gallery</option>
+    <option>atm</option>
+    <option>bakery</option>
+    <option>bank</option>
+    <option>bar</option>
+    <option>beauty_salon</option>
+    <option>bicycle_store</option>
+    <option>book_store</option>
+    <option>bowling_alley</option>
+    <option>bus_station</option>
+    <option>cafe</option>
+    <option>campground</option>
+    <option>car_dealer</option>
+    <option>car_rental</option>
+    <option>car_repair</option>
+    <option>car_wash</option>
+    <option>casino</option>
+    <option>cemetery</option>
+    <option>church</option>
+    <option>city_hall</option>
+    <option>clothing_store</option>
+    <option>convenience_store</option>
+    <option>courthouse</option>
+    <option>dentist</option>
+    <option>department_store</option>
+    <option>doctor</option>
+    <option>drugstore</option>
+    <option>electrician</option>
+    <option>electronics_store</option>
+    <option>embassy</option>
+    <option>fire_station</option>
+    <option>florist</option>
+    <option>funeral_home</option>
+    <option>furniture_store</option>
+    <option>gas_station</option>
+    <option>grocery_or_supermarket</option>
+    <option>gym</option>
+    <option>hair_care</option>
+    <option>hardware_store</option>
+    <option>hindu_temple</option>
+    <option>home_goods_store</option>
+    <option>hospital</option>
+    <option>insurance_agency</option>
+    <option>jewelry_store</option>
+    <option>laundry</option>
+ 
+    <option>lawyer</option>
+    <option>library</option>
+    <option>light_rail_station</option>
+    <option>liquor_store</option>
+    <option>local_government_office</option>
+    <option>locksmith</option>
+    <option>lodging</option>
+    <option>meal_delivery</option>
+    <option>meal_takeaway</option>
+    <option>mosque</option>
+    <option>movie_rental</option>
+    <option>movie_theater</option>
+    <option>moving_company</option>
+    <option>museum</option>
+    <option>night_club</option>
+    <option>painter</option>
+    <option>park</option>
+    <option>parking</option>
+    <option>pet_store</option>
+    <option>pharmacy</option>
+    <option>physiotherapist</option>
+    <option>plumber</option>
+    <option>police</option>
+    <option>post_office</option>
+    <option>primary_school</option>
+    <option>real_estate_agency</option>
+    <option>restaurant</option>
+    <option>roofing_contractor</option>
+    <option>rv_park</option>
+    <option>school</option>
+    <option>secondary_school</option>
+    <option>shoe_store</option>
+    <option>shopping_mall</option>
+    <option>spa</option>
+    <option>stadium</option>
+    <option>storage</option>
+    <option>store</option>
+    <option>subway_station</option>
+    <option>supermarket</option>
+    <option>synagogue</option>
+    <option>taxi_stand</option>
+    <option>tourist_attraction</option>
+    <option>train_station</option>
+    <option>transit_station</option>
+    <option>travel_agency</option>
+    <option>university</option>
+    <option>veterinary_care</option>
+    <option>zoo</option>
+  
+    </select>
+  </div>
+
+ 
+
+   
+<button id="driver" class="form-control" style="background-color: green;color:white;" type="submit">
+
+submit
+
+</button>
+</div>
+
+<br>
+
+<div  class="container"  style="width:500px;">
+    <h3>Result</h3>
+    <div id="view">
+<div id="tableview"   style="width:800px;display: none;">
+<table class="paginated table table-bordered">
+  <thead>
+    <tr>
+      
+
+      
+      
+                <th class="col">address</th>
+                 <th class="col">rating</th>
+                  <th class="col">name</th>
+                  
+    
+    </tr>
+   </thead>
+  <tbody id="table1">
+    
+    
+  </tbody>
+</table>
+
+<button id="prev"  type="button" class="btn btn-primary" disabled="true">prev</button>
+
+<button id="next"  type="button" class="btn btn-primary" disabled="true">next</button>
+
+
+
+</div>
+</div>
+</div>
+
+   
+    <div id="map"></div>
+<div style="display:none;"> 
+<ul class="geo-data">
+    <li>Full Address: <span id="location"></span></li>
+    <li>Postal Code: <span id="postal_code"></span></li>
+    <li>Country: <span id="country"></span></li>
+    <li> lat:       <span id="lat"></span></li>
+    <li> lon:      <span id="lon"></span></li>
+</ul>
+    
+
+     
+         <script >
+         $(document).ready(function() {
+               
+
+               var x;
+               var text1;
+               var text2;
+               var y;
+               var t;
+              var page;
+              var count=0;
+             var max=-1;
+                var arr;
+            //submit
+            $("#driver").click(function(event){
+                            arr=[];
+                document.getElementById("next").disabled = true;
+                document.getElementById("next").disabled = true;
+
+                 count=0;
+                $("#table1").empty(); 
+                x=$("#xxx").val();
+                text1 =  $('#lat').html();
+                text2 = $('#lon').html();
+                y = text1.concat(",",text2);
+                t=$("#abc option:selected").html();
+                
+            var f;       
+             var query1=    
+            $.getJSON('https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?',
+
+            { location:y,
+              radius:x,
+              type:t,
+            
+              key:"AIzaSyC1QzMKmULh_wfctxMeBsr1Nuoh1eJdWw0",
+              
+                },
+
+              function(jd) {  
+
+              if(jd.results.length>0){
+                $('#tableview').show();
+              } 
+
+               if(jd.results.length==0){
+                $('#tableview').hide();
+                  $('#view').html('<p>NO RESULT FOUND');
+
+              }         
+             
+             if(jd.hasOwnProperty('next_page_token'))
+             { page=jd.next_page_token;
+
+              document.getElementById("prev").disabled = true;
+              document.getElementById("next").disabled = false;
+
+             }
+               else {page="0";max=0;
+              document.getElementById("prev").disabled = true;
+              document.getElementById("next").disabled = true;
+             }
+               arr.push(jd);
+               
+             console.log(arr);
+
+                      
+                          for(i in arr[count].results){
+                            console.log(arr[count].results[i].vicinity);
+                       $("#table1").append(
+               
+                           "<tr><td>"+arr[count].results[i].vicinity+
+                           "</td><td>"+arr[count].results[i].rating+
+                           "</td><td>"+arr[count].results[i].name+
+                           "</td></tr>"
+                
+                          );
+                   
+              
+
+                }
+
+              }
+
+              );
+          });
+
+
+$("#prev").click(function(event){
+                     document.getElementById("next").disabled = true;
+                     document.getElementById("prev").disabled = true; 
+    
+
+                      count--;
+
+                            if(count<max){document.getElementById("next").disabled = false;}
+                            if(count>0){document.getElementById("prev").disabled = false;}  
+
+                          $("#table1").empty();
+                       for(i in arr[count].results){
+                       $("#table1").append(
+               
+                           "<tr><td>"+arr[count].results[i].vicinity+
+                           "</td><td>"+arr[count].results[i].rating+
+                           "</td><td>"+arr[count].results[i].name+
+                           "</td></tr>"
+                
+                          );}
+                      });
+
+
+
+//next
+
+$("#next").click(function(event){
+                     document.getElementById("next").disabled = true;
+                     document.getElementById("prev").disabled = true; 
+
+                 count++;
+                  $("#table1").empty(); 
+                   
+            if(page=="0")
+            {
+                           if(count<max){document.getElementById("next").disabled = false;}
+                            if(count>0){document.getElementById("prev").disabled = false;}               
+
+                       
+
+                      for(i in arr[count].results){
+                       $("#table1").append(
+               
+                           "<tr><td>"+arr[count].results[i].vicinity+
+                           "</td><td>"+arr[count].results[i].rating+
+                           "</td><td>"+arr[count].results[i].name+
+                           "</td></tr>"
+                
+                          );
+                   
+              }
+              }
+              
+                 
+                
+           
+            else{
+
+            var query3=    
+            $.getJSON('https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?',
+
+            { location:y,
+              radius:x,
+              type:t,
+              key:"AIzaSyC1QzMKmULh_wfctxMeBsr1Nuoh1eJdWw0",
+              pagetoken:page,
+
+              
+              },
+
+
+              function(jd) {           
+             
+                        
+             if(jd.hasOwnProperty('next_page_token'))
+             { page=jd.next_page_token;
+              document.getElementById("next").disabled = false;
+              document.getElementById("prev").disabled = false;
+                
+             }
+               
+               else {page="0";max=count;
+              
+              document.getElementById("next").disabled = true;
+              document.getElementById("prev").disabled = false;
+                
+             }
+               arr.push(jd);  
+
+                       
+                          for(i in arr[count].results){
+                       $("#table1").append(
+               
+                           "<tr><td>"+arr[count].results[i].vicinity+
+                           "</td><td>"+arr[count].results[i].rating+
+                           "</td><td>"+arr[count].results[i].name+
+                           "</td></tr>"
+                
+                          );
+                   
+              }
+              
+
+                
+                }     
+              );
+
+}
+});
+
+          
+
+$("#prev").click(function(event){
+
+
+
+
+
+});
+
+});
+
+      </script>
+
+    
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyC1QzMKmULh_wfctxMeBsr1Nuoh1eJdWw0&callback=initMap" async defer></script>
+
+<script>
+function initMap() {
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: -33.8688, lng: 151.2195},
+      zoom: 13
+    });
+    var input = document.getElementById('searchInput');
+  
+
+    var autocomplete = new google.maps.places.Autocomplete(input);
+    autocomplete.bindTo('bounds', map);
+
+    var infowindow = new google.maps.InfoWindow();
+    var marker = new google.maps.Marker({
+        map: map,
+        anchorPoint: new google.maps.Point(0, -29)
+    });
+
+    autocomplete.addListener('place_changed', function() {
+        infowindow.close();
+        marker.setVisible(false);
+        var place = autocomplete.getPlace();
+        if (!place.geometry) {
+            window.alert("Autocomplete's returned place contains no geometry");
+            return;
+        }
+  
+        
+        if (place.geometry.viewport) {
+            map.fitBounds(place.geometry.viewport);
+        } else {
+            map.setCenter(place.geometry.location);
+            map.setZoom(17);
+        }
+        marker.setIcon(({
+            url: place.icon,
+            size: new google.maps.Size(71, 71),
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(17, 34),
+            scaledSize: new google.maps.Size(35, 35)
+        }));
+       
+        marker.setPosition(place.geometry.location);
+        marker.setVisible(true);
+    
+        var address = '';
+        if (place.address_components) {
+            address = [
+              (place.address_components[0] && place.address_components[0].short_name || ''),
+              (place.address_components[1] && place.address_components[1].short_name || ''),
+              (place.address_components[2] && place.address_components[2].short_name || '')
+            ].join(' ');
+        }
+    
+        infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
+        infowindow.open(map, marker);
+      
+    
+        for (var i = 0; i < place.address_components.length; i++) {
+            if(place.address_components[i].types[0] == 'postal_code'){
+                document.getElementById('postal_code').innerHTML = place.address_components[i].long_name;
+            }
+            if(place.address_components[i].types[0] == 'country'){
+                document.getElementById('country').innerHTML = place.address_components[i].long_name;
+            }
+        }
+        document.getElementById('location').innerHTML = place.formatted_address;
+        document.getElementById('lat').innerHTML = place.geometry.location.lat();
+        document.getElementById('lon').innerHTML = place.geometry.location.lng();
+      });
+        
+}
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+          
